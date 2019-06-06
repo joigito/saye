@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  productootrabajo: MyString
+  precosto: 9.99
+  preventa: 9.99
+  cantidad: 1
+
+two:
+  productootrabajo: MyString
+  precosto: 9.99
+  preventa: 9.99
+  cantidad: 1
