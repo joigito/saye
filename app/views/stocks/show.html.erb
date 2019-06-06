@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Productootrabajo:</strong>
+  <strong>Descripción:</strong>
   <%= @stock.productootrabajo %>
 </p>
 
 <p>
-  <strong>Precosto:</strong>
+  <strong>$ Costo:</strong>
   <%= @stock.precosto %>
 </p>
 
 <p>
-  <strong>Preventa:</strong>
+  <strong>$ Venta:</strong>
   <%= @stock.preventa %>
 </p>
 
@@ -20,5 +20,5 @@
   <%= @stock.cantidad %>
 </p>
 
-<%= link_to 'Edit', edit_stock_path(@stock) %> |
-<%= link_to 'Back', stocks_path %>
+<%= link_to 'Modificar', edit_stock_path(@stock) %> |
+<%= link_to 'Volver', stocks_path %>
