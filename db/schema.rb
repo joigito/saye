@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_215312) do
+ActiveRecord::Schema.define(version: 2019_06_25_013006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,7 @@ ActiveRecord::Schema.define(version: 2019_06_24_215312) do
   create_table "jobs", force: :cascade do |t|
     t.date "fecha"
     t.bigint "client_id"
-    t.string "clients"
     t.bigint "stock_id"
-    t.string "stocks"
     t.integer "cantidad"
     t.decimal "precio", precision: 8, scale: 2
     t.decimal "total", precision: 8, scale: 2

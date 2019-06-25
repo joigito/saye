@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @job.fecha %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @job.client %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @job.stock %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @job.cantidad %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @job.precio %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @job.total %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
