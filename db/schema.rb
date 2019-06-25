@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_13_203125) do
+ActiveRecord::Schema.define(version: 2019_06_24_215312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 2019_06_13_203125) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "jobs", force: :cascade do |t|
+    t.date "fecha"
+    t.bigint "client_id"
+    t.string "clients"
+    t.bigint "stock_id"
+    t.string "stocks"
+    t.integer "cantidad"
+    t.decimal "precio", precision: 8, scale: 2
+    t.decimal "total", precision: 8, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_jobs_on_client_id"
+    t.index ["stock_id"], name: "index_jobs_on_stock_id"
+  end
+
   create_table "stocks", force: :cascade do |t|
     t.string "productootrabajo"
     t.decimal "precosto", precision: 8, scale: 2
@@ -33,4 +48,6 @@ ActiveRecord::Schema.define(version: 2019_06_13_203125) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "jobs", "clients"
+  add_foreign_key "jobs", "stocks"
 end
