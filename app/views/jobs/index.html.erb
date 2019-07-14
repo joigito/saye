@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Jobs</h1>
+<h1>Trabajos y ventas</h1>
 
 <table>
   <thead>
@@ -19,8 +19,8 @@
     <% @jobs.each do |job| %>
       <tr>
         <td><%= job.fecha %></td>
-        <td><%= job.client %></td>
-        <td><%= job.stock %></td>
+        <td><%= job.client.apeynom %></td>
+        <td><%= job.stock.productootrabajo %></td>
         <td><%= job.cantidad %></td>
         <td><%= job.precio %></td>
         <td><%= job.total %></td>
